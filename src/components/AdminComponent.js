@@ -33,7 +33,6 @@ service.getAllUsers().then((response)=>{
                         <th>UserName</th>
                         <th>Password</th>
                         <th>Action</th>
-                        <th>Testing</th>
                     </tr>
                 </thead>
                 )
