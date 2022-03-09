@@ -111,7 +111,7 @@ const Header=()=>{
                             <Link className="navbar-brand"  to="/signup" >Sign Up </Link>
                         </li>
                     </ul>
-                         <Link type='button' className='btn btn-outline-primary' to="/signin">Signin</Link>      
+                         <Link type='button' className='btn btn-outline-primary' to="/signin">Login</Link>      
                 </div>
             </nav>
         </Fragment>
