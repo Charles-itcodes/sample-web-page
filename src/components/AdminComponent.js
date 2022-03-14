@@ -1,5 +1,6 @@
 import UserService from "../services/UserService";
 import React, {useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 const AdminComponent = () => {
 
@@ -83,6 +84,7 @@ return(
 <h5 className='text-center'>LIST OF USERS</h5>
 <br/>
 {message && <div className={'alert alert-' + message.type}>{message.value}</div> }
+<Link to="/add" className="btn btn-primary mb-2">Add User</Link>
 <Table/>
 </div>
 );

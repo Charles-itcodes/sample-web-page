@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import AddUser from './AddUser';
 import AdminComponent from './AdminComponent';
 
 const UserRouter = () => {
@@ -16,6 +17,7 @@ const UserRouter = () => {
                             <Route path="/signup" component={SignUp}/>
                             <Route path="/signin" component={SignIn}/>
                             <Route path="/admin" component={AdminComponent}/>
+                            <Route path="/add" component={AddUser}/>
                         </Switch>
                     </Router>
                 </div>
@@ -46,7 +48,7 @@ const SignUp=()=>
 <                                  div class="col-sm-9 m-auto"><input type="password" class="form-control" placeholder="Enter password"/></div>
                             </div>
                             <div class="row mb-3">
-                                        <div class="col-sm-2 m-auto"><button type="submit" class="btn btn-success btn-block">Submit</button></div>
+                                 <div class="col-sm-2 m-auto"><button type="submit" class="btn btn-primary btn-block">Submit</button></div>
                             </div>
                     </form>	
                 </div>
@@ -63,21 +65,21 @@ const SignIn=()=>
                 <form class="form-signin ">
                     <div class="form-label-group">
                         <input type="text" id="email" name="email"
-                            placeholder="Enter Email" class="form-control m-1" /> 
+                            placeholder="Enter Email" class="form-control m-auto mb-2" /> 
                     </div>
                     <div class="form-label-group">
                         <input type="password" placeholder="Enter Password" id="password"
-                            name="password" class="form-control m-1"/>  
+                            name="password" class="form-control m-auto mb-2"/>  
                     </div>
-                    <div class="custom-control custom-checkbox mb-3">
+                    <div class="custom-control custom-checkbox mb-3 px-2">
                         <input type="checkbox" class="custom-control-input"
                             id="customCheck1"/>
                              <label class="custom-control-label"
                             for="customCheck1">Remember password</label>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block text-uppercase"
+                    <button class="btn btn-md btn-primary btn-block text-uppercase px-3 m-3 "
                         type="submit">Sign in</button>
-                         <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                         <p class="small mb-5 pb-lg-2 px-3"><a class="text-muted" href="#!">Forgot password?</a></p>
                          <p>Don't have an account? <a href="/signup" class="link-primary">Register here</a></p>
                 </form>
             </div>
@@ -85,7 +87,6 @@ const SignIn=()=>
     </div>
 </div>
 </div>
-
 
 
 const Header=()=>{
@@ -111,7 +112,9 @@ const Header=()=>{
                             <Link className="navbar-brand"  to="/signup" >Sign Up </Link>
                         </li>
                     </ul>
-                         <Link type='button' className='btn btn-outline-primary' to="/signin">Login</Link>      
+                    <form>                  
+                         <Link type='button' className='btn btn-outline-primary' to="/signin">Login</Link>
+                    </form>              
                 </div>
             </nav>
         </Fragment>
